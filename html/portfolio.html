@@ -1,0 +1,131 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Page</title>
+    <link rel="stylesheet" href="/style/portfolio.css" />
+    <!-- boostrap start -->
+    <link rel="stylesheet" href="/style/boostrap min css.css" />
+    <!-- boostrap end -->
+    <!-- font-awesome start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+      integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font- awesome end -->
+  </head>
+  <body>
+    <!-- main container for three sections -->
+    <div class="containers">
+      <!-- header for logo and links -->
+      <header class="heading-nav">
+        <!-- logo -->
+        <div class="logo-cover">
+          <h1 class="logo">
+            <i class="fa-solid fa-gem"></i> crystalite<span>X</span>
+          </h1>
+        </div>
+        <!-- later use for mobile view -->
+        <div class="ul-link">
+          <!-- link container -->
+          <ul class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About me</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <!-- whatsapp integration using whatsapp api -->
+        <div class="btn-contact">
+          <button type="button" id="whatsapp">contact me</button>
+        </div>
+      </header>
+
+      <div class="card-wrapper">
+        <h2>projects Done</h2>
+        <div class="rounded-border">
+          <div class="bg-rounded">
+            <button
+              type="button"
+              id="All-projects"
+              data-value="Arts"
+              data-value1="Graphics"
+            >
+              All projects
+            </button>
+            <button type="button" id="Arts" data-values="Arts">Arts</button>
+            <button type="button" id="Graphics" data-val="Graphics">
+              Graphics
+            </button>
+          </div>
+        </div>
+        <div class="cards-grid"></div>
+      </div>
+
+      <div class="Github-portfolio">
+        <div class="guthub-title">
+          <h5>Check out my github repository</h5>
+          <h3>My Github repository</h3>
+        </div>
+        <div class="forms-guthub">
+          <input type="search" name="mysearch" id="mysearch" /><span
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+        </div>
+        <div class="grid-github">
+        </div>
+      </div>
+    </div>
+              <footer class="footer">
+        <div class="footer-grid">
+          <div class="contacts">
+            <p><a href=""><span><i class="fa-solid fa-envelope"></i></span> christiansilvester700@gmail.com</a></p>
+            <p><a href=""><span><i class="fa-solid fa-phone"></i></span> +234-915-784-7452</a></p>
+          </div>
+          <ul class="first-links">
+            <h4>Pages</h4>
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About Me</a></li>
+            <li><a href="">Client testimonials</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Contact me</a></li>
+          </ul>
+          <ul class="second-links">
+            <h4>Social media</h4>
+            <li><a href="">Medium</a></li>
+            <li><a href="">Dribble</a></li>
+            <li><a href="">LinkedIn</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Instagram</a></li>
+          </ul>
+          <ul class="third-site">
+            <h4>Address</h4>
+            <li>20 Jaknade Ojo</li>
+            <li>Lagos, Nigeria</li>
+          </ul>
+        </div>
+      </footer>
+
+
+    <script src="/javascript/boostrap min js.js"></script>
+    <script src="/javascript/portfolio.js" defer charset="UTF-8"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+/** @format */
+
+@media (max-width: 810px) {
+  .text-grid-pics {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.6em;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease;
+  }
+  .author-picture {
+    width: max-content;
+  }
+  .section-grid-for-chris form::after {
+    right: 35%;
+  }
+  .right-angle-for-card {
+    right: 12%;
+  }
+  .left-angle-for-card {
+    left: 12%;
+  }
+}
+
+@media (max-width: 750px) {
+  /* .author-picture{
+        background: red;
+    } */
+  .ul-link {
+    position: fixed;
+    bottom: -15px;
+    z-index: 1000;
+    width: 100%;
+  }
+  .links li a {
+    text-decoration: none;
+    /* color: #0b1242; */
+  }
+  .links li a span:first-child {
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    transition: 0.4s ease;
+  }
+  .links li a span:first-child:hover {
+    background: #0b1242;
+    transition: 0.4s ease;
+    border-radius: 50%;
+  }
+  .links li a span:first-child i {
+    color: #fff;
+  }
+  .inactives {
+    color: #fff !important;
+    transform: rotateZ(60deg) !important;
+    transition: 0.4s ease !important;
+    -webkit-transform: rotateZ(60deg) !important;
+    -moz-transform: rotateZ(60deg) !important;
+    -ms-transform: rotateZ(60deg) !important;
+    -o-transform: rotateZ(60deg) !important;
+}
+  .links li {
+    all: revert;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.4em;
+    width: 100%;
+    background: #436096;
+    padding: 15px 50px;
+    /* border-radius: 30px; */
+    border: 2px solid #436096;
+    transition: 0.4s ease;
+    align-items: center;
+    justify-content: space-around;
+    place-items: center;
+  }
+  .links:hover {
+    background: transparent;
+    transition: 0.4s ease;
+  }
+  .links li:hover {
+    all: revert;
+  }
+  .links li a {
+    all: revert;
+  }
+  .links li a span:last-child {
+    display: none;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2em;
+  }
+}
+@media (max-width: 700px) {
+  .firms-flex {
+    gap: 3em;
+  }
+  .categories .separate {
+    grid-template-columns: 1fr;
+    place-items: revert;
+    grid-gap: 2em;
+  }
+  .grid-slider {
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+  }
+  .section-grid-for-chris form::after {
+    all: revert;
+  }
+  .section-grid-for-chris{
+    flex-direction: column;
+    gap:3em;
+  }
+  .links-for-contact{
+    display: flex;
+    gap:2em;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .test{
+    flex-direction: column;
+    gap:1.5em;
+    place-items: revert;
+    padding: 10px;
+  }
+  .pagnation{
+    margin-top: revert;
+  }
+  .wrapper-page{
+    flex-direction: column;
+    gap: 0.6em;
+  }
+  .wrapper-page textarea{
+    width: 100%;
+  }
+}
+@media(max-width:620px){
+    .footer-grid{
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+    footer{
+        padding-top: 50px;
+    }
+    .exp-port-grid{
+        padding: 10px;
+    }
+    .author-text{
+        padding: revert;
+    }
+    .author-picture img {
+        min-width:200px;
+        
+    }
+}
+@media(max-width:360px){
+    .contacts p:first-child{
+        word-wrap: wrap;
+    }
+    .speech-grid{
+      display: flex;
+      flex-direction: column;
+      gap:0.4em;
+    }
+    .title-of-page h1{
+      font-size: 2rem;
+    }
+    .title-of-page p, .title-page p{
+      font-size: 0.9em;
+      text-align: center;
+    }
+    .title-page h1{
+      font-size: 1.6rem;
+    }
+    .title-page{
+      padding: 0 10px;
+    }
+      .right-angle-for-card {
+    right: 4%;
+  }
+  .left-angle-for-card {
+    left: 4%;
+  }
+  .spread-lines{
+    all:revert;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 13px;
+    gap:0;
+  }
+  .spread-lines ul li{
+    gap:0.3em;
+  }
+  .spread-lines ul li .list-line span:first-child{
+    font-size:0.8em
+  }
+  .spread-lines ul li .list-line span:last-child{
+    font-size:0.8em
+  }
+  .contacts p a{
+    font-size: 0.8em;
+    font-weight: lighter;
+  }
+  .conatct-page-for-chris{
+    padding: 10px;
+  }
+  .e-card{
+    min-width: 280px;
+  }
+  .indus-developm .grid{
+    grid-template-columns: 1fr;
+    grid-gap: 0.5em;
+  }
+}
