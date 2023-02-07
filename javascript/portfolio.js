@@ -1,12 +1,26 @@
 /** @format */
 
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#loader").style.visibility = "visible";
+  } else {
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
+
 
 const btn1 = document.querySelector("#All-projects");
 const btn2 = document.querySelector("#Arts");
 const btn3 = document.querySelector("#Graphics");
 const search = document.querySelector("#mysearch");
+const glass = document.querySelector(".glass");
 const card = document.querySelector(".cards-grid");
 
+glass.onclick = () => {
+  search.classList.add("input-eject");
+}
 
 btn1.addEventListener("click", (e) => {
     try {
@@ -23,7 +37,7 @@ btn1.addEventListener("click", (e) => {
 });
 btn2.addEventListener("click", (e) => {
     try {
-        e.preventDefault();
+      e.preventDefault();
     const targets = e.target.getAttribute("data-values");
       const searchstring = Portfolio.filter((item) => {
           return (item.categories.includes(targets))
@@ -161,7 +175,7 @@ function run(e) {
         character.name.toLowerCase().includes(searchstring) ||
         character.description.toLowerCase().includes(searchstring)
       );
-    });
+  });
     gitDataBase(searches);
   } catch (err) {
     alert(err);

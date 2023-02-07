@@ -28,6 +28,39 @@
       referrerpolicy="no-referrer"
     />
     <!-- font- awesome end -->
+        <!-- style for loader -->
+        <style>
+        #loader {
+            border: 12px solid #160a94;
+            border-radius: 50%;
+            border-top: 12px solid #fff;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+            display: flex;
+            justify-content: center;
+            place-items: center;
+        }
+        #loader i{
+          font-size: 2.2em;
+          color: #a7d8de;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
   </head>
   <body>
     <!-- main container for three sections -->
@@ -40,20 +73,9 @@
             <i class="fa-solid fa-gem"></i> crystalite<span>X</span>
           </h1>
         </div>
-        <!-- later use for mobile view -->
-        <div class="ul-link">
-          <!-- link container -->
-          <ul class="links">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">About me</a></li>
-            <li><a href="">Blog</a></li>
-          </ul>
-        </div>
-        <!-- whatsapp integration using whatsapp api -->
-        <div class="btn-contact">
-          <button type="button" id="whatsapp">contact me</button>
+        <!-- Back to home page -->
+        <div class="btn-home">
+          <button type="button"><a href="/index.html" style="color: #fff; text-decoration:none;">Home</a></button>
         </div>
       </header>
 
@@ -84,45 +106,56 @@
           <h3>My Github repository</h3>
         </div>
         <div class="forms-guthub">
-          <input type="search" name="mysearch" id="mysearch" /><span
+          <input type="search" name="mysearch" id="mysearch" class="search"/><span class="glass"
             ><i class="fa-solid fa-magnifying-glass"></i
           ></span>
         </div>
-        <div class="grid-github">
-        </div>
+        <div class="grid-github"></div>
       </div>
+      <br>
     </div>
-              <footer class="footer">
-        <div class="footer-grid">
-          <div class="contacts">
-            <p><a href=""><span><i class="fa-solid fa-envelope"></i></span> christiansilvester700@gmail.com</a></p>
-            <p><a href=""><span><i class="fa-solid fa-phone"></i></span> +234-915-784-7452</a></p>
-          </div>
-          <ul class="first-links">
-            <h4>Pages</h4>
-            <li><a href="">Home</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">About Me</a></li>
-            <li><a href="">Client testimonials</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contact me</a></li>
-          </ul>
-          <ul class="second-links">
-            <h4>Social media</h4>
-            <li><a href="">Medium</a></li>
-            <li><a href="">Dribble</a></li>
-            <li><a href="">LinkedIn</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Instagram</a></li>
-          </ul>
-          <ul class="third-site">
-            <h4>Address</h4>
-            <li>20 Jaknade Ojo</li>
-            <li>Lagos, Nigeria</li>
-          </ul>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div class="contacts">
+          <p>
+            <a href=""
+              ><span><i class="fa-solid fa-envelope"></i></span>
+              christiansilvester700@gmail.com</a
+            >
+          </p>
+          <p>
+            <a href=""
+              ><span><i class="fa-solid fa-phone"></i></span>
+              +234-915-784-7452</a
+            >
+          </p>
         </div>
-      </footer>
+        <ul class="first-links">
+          <h4>Pages</h4>
+          <li><a href="">Home</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">About Me</a></li>
+          <li><a href="">Client testimonials</a></li>
+          <li><a href="">Portfolio</a></li>
+          <li><a href="">Contact me</a></li>
+        </ul>
+        <ul class="second-links">
+          <h4>Social media</h4>
+          <li><a href="https://medium.com/@christiansilvester700">Medium</a></li>
+          <li><a href="https://dribbble.com/chris903">Dribble</a></li>
+          <li><a href="https://www.linkedin.com/in/christian-silvester-a049a8230/">LinkedIn</a></li>
+          <li><a href="https://twitter.com/chris-de-sypher">Twitter</a></li>
+          <li><a href="https://www.instagram.com/chris_de_sypher1/">Instagram</a></li>
+        </ul>
+        <ul class="third-site">
+          <h4>Address</h4>
+          <li>20 Jaknade Ojo</li>
+          <li>Lagos, Nigeria</li>
+        </ul>
+      </div>
+    </footer>
+    <div id="loader" class="center"><i class="fa-solid fa-gem"></i></div>
 
 
     <script src="/javascript/boostrap min js.js"></script>

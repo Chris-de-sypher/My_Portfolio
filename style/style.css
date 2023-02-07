@@ -13,6 +13,7 @@ html {
 body {
   background-color: #e3e3e3;
   overflow-x: hidden;
+  width: 100%;
 }
 html {
   scrollbar-width: none;
@@ -54,6 +55,7 @@ body::-webkit-scrollbar {
 .containers {
   background-color: var(--bg-color-black);
   height: auto;
+  width:inherit
 }
 .heading-nav {
   display: flex;
@@ -69,8 +71,10 @@ body::-webkit-scrollbar {
   transition: var(--transition-move);
 }
 .links li:hover {
-  transform: translateY(-10px) translateX(10px);
   transition: var(--transition-move);
+  background: var(--logo-color);
+  padding: 5px;
+  border-radius: var(--border-radius-6);
 }
 .links li a {
   padding: 0 14px;
@@ -78,12 +82,7 @@ body::-webkit-scrollbar {
   color: var(--text-color-white);
   text-decoration: none;
 }
-/* .links li a span:first-child{
-  color: #1b2152;
-} */
-.links li a span:first-child{
-display: none;
-}
+
 .logo-cover .logo {
   color: var(--text-color-white);
   font-family: var(--logo-font);
@@ -163,6 +162,7 @@ display: none;
   width: 100%;
   padding: 25px;
   border: 2px solid #436096;
+  overflow: hidden;
 }
 .btn-call button {
   padding: 14px 27px;
@@ -359,9 +359,9 @@ marquee p:last-child {
   font-size: 1rem;
   margin-top: 10px;
 }
-.e-card:nth-child(even) {
+/* .e-card:nth-child(even) {
   margin-top: 100px;
-}
+} */
 .e-card {
   background-color: #1b2152;
   width: 330px;
@@ -684,27 +684,33 @@ marquee p:last-child {
   justify-content: center;
 }
 .seven p span,
-.eight p span,
-.nine p span {
+.eight p span {
   display: block;
-  margin-bottom: 19px;
+  margin-bottom: 10px;
   background: var(--bg-color-cyan);
   width: max-content;
   padding: 5px 8px;
   border-radius: var(--border-radius-50);
   color: #000;
 }
+.nine p{
+
+}
+.nine span{
+
+}
+.nine span:nth-child(2) {
+
+}
 .seven p,
-.eight p,
-.nine p {
+.eight p{
   color: var(--text-color-faint-white);
   font-family: sans-serif;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 .seven span:nth-child(2),
-.eight span:nth-child(2),
-.nine span:nth-child(2) {
+.eight span:nth-child(2) {
   font-size: 1rem;
   font-family: sans-serif;
   line-height: 1.5em;
@@ -900,7 +906,7 @@ marquee p:last-child {
   justify-content: space-around;
   place-items: center;
 }
-.pagnation span {
+.pagnation span, .pagnations span {
   font-size: 1.3rem;
   background: #1b2152;
   padding: 14px 17px;
@@ -914,7 +920,11 @@ marquee p:last-child {
 .pagnation {
   margin-top: 150px;
 }
-.pagnation span:hover {
+.pagnations {
+  margin: 30px 0 0 15px;
+  display: none;
+}
+.pagnation span:hover, .pagnations span:hover {
   background: #2a3275;
   transition: var(--transition-move);
 }
@@ -961,6 +971,8 @@ marquee p:last-child {
 .client-name-org h3 {
   font-family: sans-serif;
   font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 .client-name-org span {
   font-family: sans-serif;
@@ -969,7 +981,8 @@ marquee p:last-child {
   text-transform: capitalize;
 }
 .client-name-org {
-  line-height: 1.5rem;
+  line-height: 1rem;
+  margin-top: 10px;
 }
 .client-img img {
   width: 40px;
@@ -982,7 +995,7 @@ marquee p:last-child {
 .client-profile {
   display: flex;
   gap: 0.6em;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 /* nested */
@@ -1418,8 +1431,8 @@ iframe {
   transition: var(--transition-move) !important;
 }
 .ecard-portfolio h4 {
-  font-size: 1.5em;
-  font-family: sans-serif;
+  font-size: 1.2em;
+  font-family: var(--other-font2);
   margin: 25px 0;
   color: #ecf0f3;
   font-weight: 600;
@@ -1529,8 +1542,7 @@ iframe {
 .section-grid-for-chris form{
   display: flex;
   flex-direction: column;
-  width: 37%;
-  min-width: 260px;
+  width:37%;
   gap: 1em;
   background: #436096;
   padding: 16px;
@@ -1660,9 +1672,11 @@ iframe {
 .contacts p a{
   color: #fff;
   font-size: 1.3em;
-  font-family: sans-serif;
+  font-family: var(--other-font2);
   font-weight: 600;
   text-decoration: none;
+  letter-spacing: 1.7px;
+  color: var(--logo-color);
 }
 .contacts p span{
   font-size: 1.4em;
