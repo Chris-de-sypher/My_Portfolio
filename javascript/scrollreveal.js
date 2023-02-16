@@ -49,7 +49,7 @@ ScrollReveal().reveal(".section-cover", {
   origin: "bottom",
 });
 ScrollReveal().reveal(".text", { delay: 200, origin: "right" });
-ScrollReveal({ reset: true }).reveal(".fetching", {
+ScrollReveal({ reset: false }).reveal(".fetching", {
   delay: 100,
   origin: "bottom",
 });

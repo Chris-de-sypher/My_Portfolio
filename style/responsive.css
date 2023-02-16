@@ -9,9 +9,9 @@
     align-items: center;
     transition: 0.4s ease;
   }
-  .author-picture {
+  /* .author-picture {
     width: max-content;
-  }
+  } */
   .section-grid-for-chris form::after {
     right: 35%;
   }
@@ -21,8 +21,8 @@
   .left-angle-for-card {
     left: 12%;
   }
-        .section-cover::after{
-    all:revert;
+  .section-cover::after {
+    all: revert;
   }
 }
 
@@ -35,7 +35,7 @@
     width: max-content;
     display: none;
   }
-  .toggle-display{
+  .toggle-display {
     display: block;
   }
   .links li a {
@@ -43,14 +43,14 @@
     font-size: 1.2em !important;
     color: rgb(195, 195, 201) !important;
   }
-  .link li a:active{
-    color:#436096 !important;
+  .link li a:active {
+    color: #436096 !important;
   }
- 
+
   .inactives {
     color: #fff !important;
     transition: 0.4s ease !important;
-}
+  }
   .links li {
     all: revert;
   }
@@ -71,7 +71,7 @@
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
-}
+  }
   /* .links:hover {
     all: revert;
 
@@ -104,252 +104,260 @@
   .section-grid-for-chris form::after {
     all: revert;
   }
-  .section-grid-for-chris{
+  .section-grid-for-chris {
     flex-direction: column;
-    gap:3em;
+    gap: 3em;
   }
-  .section-grid-for-chris form{
+  .section-grid-for-chris form {
     width: 240px;
   }
-  .links-for-contact{
+  .links-for-contact {
     display: flex;
-    gap:2em;
+    gap: 2em;
     justify-content: space-around;
     margin-top: 10px;
     flex-wrap: wrap;
   }
-  .test{
+  .test {
     flex-direction: column;
-    gap:1.5em;
+    gap: 1.5em;
     place-items: revert;
     padding: 10px;
   }
-  .pagnation{
+  .pagnation {
     margin-top: revert;
   }
-  .wrapper-page{
+  .wrapper-page {
     flex-direction: column;
     gap: 0.6em;
   }
-  .wrapper-page textarea{
+  .wrapper-page textarea {
     width: 100%;
   }
-  .swiper{
+  .swiper {
     overflow: hidden;
   }
 }
-@media(max-width:620px){
-    .footer-grid{
-        grid-template-columns: 1fr;
-        padding: 5px;
-    }
-    footer{
-        padding-top: 50px;
-    }
-    .exp-port-grid{
-        padding: 10px;
-    }
-    .author-text{
-        padding: revert;
-    }
-    .author-picture img {
-        min-width:200px;
-        
-    }
-    .speech-grid{
-      display: flex;
-      flex-direction: column;
-      gap:0.4em;
-    }
-          .right-angle-for-card {
+@media (max-width: 620px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 5px;
+  }
+  footer {
+    padding-top: 50px;
+  }
+  .exp-port-grid {
+    padding: 10px;
+  }
+  .author-text {
+    padding: revert;
+  }
+  .author-picture img {
+    min-width: 200px;
+  }
+  .speech-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+  }
+  .right-angle-for-card {
     display: none;
   }
   .left-angle-for-card {
     display: none;
   }
 }
-@media(max-width:360px){
-    .contacts p:first-child{
-        word-wrap: wrap;
-    }
-    .title-of-page h1{
-      font-size: 2rem;
-    }
-    .title-of-page p, .title-page p{
-      font-size: 0.9em;
-      text-align: center;
-    }
-    .title-page h1{
-      font-size: 1.6rem;
-    }
-    .title-page{
-      padding: 0 10px;
-    }
-      .right-angle-for-card {
+@media (max-width: 360px) {
+  .contacts p:first-child {
+    word-wrap: wrap;
+  }
+  .title-of-page h1 {
+    font-size: 2rem;
+  }
+  .title-of-page p,
+  .title-page p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .title-page h1 {
+    font-size: 1.6rem;
+  }
+  .title-page {
+    padding: 0 10px;
+  }
+  .right-angle-for-card {
     right: 4%;
   }
   .left-angle-for-card {
     left: 4%;
   }
-  .spread-lines{
-    all:revert;
+  .spread-lines {
+    all: revert;
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
     padding-left: 0;
     padding-right: 13px;
-    gap:0;
+    gap: 0;
   }
-  .spread-lines ul li{
-    gap:0.3em;
+  .spread-lines ul li {
+    gap: 0.3em;
   }
-  .spread-lines ul li .list-line span:first-child{
-    font-size:0.8em
+  .spread-lines ul li .list-line span:first-child {
+    font-size: 0.8em;
   }
-  .spread-lines ul li .list-line span:last-child{
-    font-size:0.8em
+  .spread-lines ul li .list-line span:last-child {
+    font-size: 0.8em;
   }
-  .contacts p a{
+  .contacts p a {
     font-size: 0.8em;
     font-weight: lighter;
   }
-  .conatct-page-for-chris{
+  .conatct-page-for-chris {
     padding: 10px;
   }
-  .indus-developm .grid{
+  .indus-developm .grid {
     grid-template-columns: 1fr;
     grid-gap: 0.5em;
   }
-    .section-cover{
+  .section-cover {
     background: none;
     border: none;
   }
-    .e-card{
+  .e-card {
     width: 260px !important;
   }
 }
 
-@media(max-width:290px){
-  .cards-for-page{
+@media (max-width: 290px) {
+  .cards-for-page {
     width: 220px !important;
   }
-  .author-picture{
+  .author-picture {
     width: 220px !important;
     overflow: hidden !important;
     padding: 6px;
   }
-  .author-picture img{
+  .author-picture img {
     width: 200px !important;
   }
-  .e-card{
+  .e-card {
     width: 220px !important;
   }
-  .name h1{
+  .name h1 {
     font-size: 2.2em !important;
   }
-  .swiper-slide{
-    width:180px !important;
+  .swiper-slide {
+    width: 180px !important;
     margin: 0 auto;
   }
-  .swiper{
+  .swiper {
     margin: 0 auto;
   }
-  .slides{
+  .slides {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .my-photos{
+  .my-photos {
     margin: revert;
     margin: 20px auto;
   }
-  .ecard-portfolio{
+  .ecard-portfolio {
     width: 200px !important;
   }
-  .ecard-portfolio img{
+  .ecard-portfolio img {
     width: 170px !important;
   }
-  .section-cover{
+  .section-cover {
     background: none;
     border: none;
   }
-  .section-grid-for-chris form{
-    width:220px !important;
+  .section-grid-for-chris form {
+    width: 220px !important;
   }
-  .section-grid-for-chris form h3{
+  .section-grid-for-chris form h3 {
     font-size: 0.9em;
   }
-  .right-angle-for-card, .left-angle-for-card{
+  .right-angle-for-card,
+  .left-angle-for-card {
     display: none !important;
   }
-  .spread-lines{
-    all:revert;
+  .spread-lines {
+    all: revert;
     display: flex;
     justify-content: space-around;
     width: 160px;
   }
-  .first-line li .list-line span, .second-line li .list-line span{
+  .first-line li .list-line span,
+  .second-line li .list-line span {
     font-size: 0.7em !important;
   }
-  .first-line li p i, .second-line li p i{
+  .first-line li p i,
+  .second-line li p i {
     font-size: 0.8em !important;
   }
-  .name{
+  .name {
     margin: revert;
   }
-  .speech-grid{
+  .speech-grid {
     margin: revert;
   }
-  .speech-one p, .speech-two p{
+  .speech-one p,
+  .speech-two p {
     font-size: 0.8em !important;
   }
-  .grid-projects-done{
+  .grid-projects-done {
     margin: revert;
     margin-top: 40px;
   }
-  .grid-projects-done p{
+  .grid-projects-done p {
     font-size: 0.9em;
   }
-  .lineing{
+  .lineing {
     display: none;
   }
-  .categories-text h1{
+  .categories-text h1 {
     font-size: 2.3em !important;
   }
-  .view-all-p a{
+  .view-all-p a {
     padding: revert;
     padding: 12px;
   }
-  .article-writeUp{
+  .article-writeUp {
     padding: 6px;
   }
-  .contacts{
+  .contacts {
     display: none;
   }
-    .logo  {
+  .logo {
     font-size: 0.9em !important;
   }
-  .btn-contact button{
+  .btn-contact button {
     border-radius: 0;
     padding: 0;
     padding: 4px;
     display: none;
+  }
+  .btn-call button {
+    padding: revert;
+    padding: 5px;
+    font-size: 0.8em;
+  }
+  .btn-call button:hover i {
+    all: revert;
+  }
+  @media (max-width:240px){
+    
+  }
 }
-.btn-call button{
-  padding: revert;
-  padding: 5px;
-  font-size: 0.8em;
-}
-.btn-call button:hover i{
-  all:revert;
-}
-}
-@media(max-width:290px) and (max-height:320px){
-  .section-grid-for-chris form input, .section-grid-for-chris form select{
+@media (max-width: 290px) and (max-height: 320px) {
+  .section-grid-for-chris form input,
+  .section-grid-for-chris form select {
     height: 13vh;
   }
-  .section-grid-for-chris form button{
+  .section-grid-for-chris form button {
     height: 13vh;
   }
 }

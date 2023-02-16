@@ -1,0 +1,200 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=Cinzel+Decorative:wght@900&family=Koulen&family=Lobster&family=Lobster+Two:ital,wght@1,700&family=Oleo+Script&family=Rubik+Microbe&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #e3e3e3;
+  overflow-x: hidden;
+  width: 100%;
+  background: var(--bg-color-black);
+}
+html {
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+:root {
+  --text-color-white: #fff;
+  --text-color-faint-white: #def;
+  --text-color-blue: #160a94;
+  --text-color-black: #000;
+  --text-faint-black-color: #888;
+  --text-color-blue: #0e00ff;
+  --bg-color-cyan: cyan;
+  --bg-color-white: #fff;
+  --bg-color-black: #0b1242;
+  --bg-color-blue: #0e00ff;
+  --transition-move: 0.4s ease;
+  --transition-delay-move: 0.4s 0.1s ease;
+  --border-radius-6: 6px;
+  --border-radius-30: 30px;
+  --border-radius-10: 10px;
+  --border-radius-50: 50%;
+  --logo-font: "Lobster", cursive;
+  --other-font1: "Rubik Microbe", cursive;
+  --other-font2: "Oleo Script", cursive;
+  --logo-color: #a7d8de;
+  --bg-card-color: #1b2152;
+  --bg-card-color-hover: rgba(0, 0, 0, 0.16);
+}
+.containers {
+  background-color: var(--bg-color-black);
+  height: auto;
+  width: inherit;
+}
+.heading-nav {
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  align-items: center;
+  transition: 0.4s ease;
+  height: 14vh;
+  position: relative;
+}
+.links li {
+  display: inline-block;
+  transition: var(--transition-move);
+}
+
+.links li a {
+  padding: 0 14px;
+  font-family: sans-serif;
+  color: var(--text-color-white);
+  text-decoration: none;
+}
+
+.logo-cover .logo {
+  color: var(--text-color-white);
+  font-family: var(--logo-font);
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.logo-cover .logo i {
+  color: var(--logo-color);
+}
+.logo-cover .logo span {
+  font-size: 1.8rem;
+  color: var(--logo-color);
+}
+
+.container {
+  line-height: 3em;
+  text-align: center;
+  margin-top: 160px;
+  position: relative;
+}
+
+#text span {
+  font-size: 4em;
+  font-family: sans-serif;
+  color: #a7d8de;
+  z-index: 1;
+  display: inline-block;
+}
+#text {
+  z-index: 1;
+  opacity: 200;
+}
+p {
+  font-size: 1.7em;
+  color: #e22;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+.nest a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 0.9em;
+  color: blue;
+  text-transform: capitalize;
+  background-color: #def;
+  width: max-content;
+  padding: 8px 12px;
+  margin: 4px auto;
+  border-radius: var(--border-radius-6);
+}
+
+h1 i {
+  font-size: 0.9em;
+  color: #a7d8de;
+}
+
+.bg-changer span {
+  font-size: 1.6em;
+  cursor: pointer;
+  color: #e8e7e3;
+}
+
+img {
+  width: 200px;
+  opacity: 0.9;
+  position: absolute;
+  top: -70%;
+  left: 39%;
+}
+
+.nest {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.2em;
+  color: var(--text-color-faint-white);
+  font-family: var(--other-font1);
+}
+
+.nest span:first-child {
+  font-size: 1.3em;
+}
+
+/* media query */
+
+@media (max-width: 443px) {
+  .ul-link {
+    display: none;
+  }
+  .heading-nav {
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+  h1 span{
+    font-size: 2.7em;
+    transition: var(--transition-move);
+  }
+  img{
+    display: none;
+  }
+}
+
+#text span::first-letter {
+    background: url(https://web.archive.org/web/20150807125159if_/http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+    border-radius: 50%;
+    background-size: 610px;
+    background-clip: text;
+    -webkit-background-clip : text; 
+    color: transparent;
+    background-size: cover;
+}
+
+@media (max-width:340px){
+    body{
+        width: 100%;
+    }
+
+}

@@ -14,40 +14,40 @@ document.onreadystatechange = function () {
 
 const newArrays = [
   {
-    image: "/images/mobileapp.png",
+    image: "mobileapp.png",
     text1: "Design",
     text2: "Branding",
     h1tag: "Mobile <br> development",
     industryText: "Programify",
     LocationText: "Segbeya BJ",
-    url: "/html/portfolio.html",
+    url: "portfolio.html",
   },
   {
-    image: "/images/webui.jpeg",
+    image: "webui.jpeg",
     text1: "Development",
     text2: "Design",
     h1tag: "web <br> Tutorial",
     industryText: "GDSC_ESTAM",
     LocationText: "Segbeya BJ",
-    url: "/html/portfolio.html",
+    url: "portfolio.html",
   },
   {
-    image: "/images/flyer.png",
+    image: "flyer.png",
     text1: "Advertisement",
     text2: "Coaching",
     h1tag: "Digital <br> Marketing",
     industryText: "Word press",
     LocationText: "Segbeya BJ",
-    url: "/html/portfolio.html",
+    url: "portfolio.html",
   },
   {
-    image: "/images/advert.png",
+    image: "advert.png",
     text1: "Advertisement",
     text2: "Branding",
     h1tag: "Advertisement",
     industryText: "607CODERS",
     LocationText: "Segbeya BJ",
-    url: "/html/portfolio.html",
+    url: "portfolio.html",
   },
 ];
 
@@ -99,7 +99,7 @@ const ClientProfile = [
       "Such an amazing time working with chris.",
     comment:
       "I can't really expressed how glad I am working with christian..lol tho am a bit naive when working with him because he is a man of principle. Love you chris!",
-    clientPic: "/images/baby.jpeg",
+    clientPic: "baby.jpeg",
     clientName: "Adeniyi Okunuga",
     clientProfile: "web developer @ 607-CODERS",
   },
@@ -107,7 +107,7 @@ const ClientProfile = [
     heading: "I was really glad working with you.",
     comment:
       "Working with you and I saw how you do it, it really showed you knew what you do. Your works are so aethestic and good.",
-    clientPic: "/images/baby.jpeg",
+    clientPic: "maria.jpg",
     clientName: "Maria Grace",
     clientProfile: "Developer @Devops",
   },
@@ -116,8 +116,8 @@ const ClientProfile = [
       "Sending gratitude to Chris",
     comment:
       "I never thought working with you would be fun but indeed it was and not only that, I was able to learn some things from you. Thanks a lot Chris.",
-    clientPic: "/images/baby.jpeg",
-    clientName: "T-blex",
+    clientPic: "john.jpg",
+    clientName: "John",
     clientProfile: "Client",
   },
 ];
