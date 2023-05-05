@@ -158,9 +158,10 @@ const cardList = (listItems) => {
 
 cardList(Portfolio);
 
+
+
+
 let stores = [];
-
-
 
 const $url = 'https://api.github.com/users/chris-de-sypher/repos';
 ;

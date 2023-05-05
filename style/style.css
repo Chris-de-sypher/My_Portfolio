@@ -119,7 +119,6 @@ body::-webkit-scrollbar {
 }
 .text-pics .text-grid-pics {
   display: grid;
-  /* justify-content: space-around; */
   grid-template-columns: 2fr 1fr;
   grid-gap: 0.6em;
   padding: 13px;
@@ -137,7 +136,7 @@ body::-webkit-scrollbar {
 }
 .author-text p {
   font-family: sans-serif;
-  color: var(--text-faint-black-color);
+  color: var(--text-color-faint-white);
   margin-top: 30px;
   font-size: 1rem;
   line-height: 1.5em;
