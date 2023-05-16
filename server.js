@@ -37,4 +37,4 @@ app.listen(PORT, hostname, () => {
 
 
 
-// module.exports.handler = serverless(app);
+module.exports.handler = serverless(app);
