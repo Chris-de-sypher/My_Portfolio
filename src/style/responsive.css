@@ -1,23 +1,31 @@
 /** @format */
 
+@media (max-width: 400px) {
+  .letter {
+    width: 100%;
+    margin: 5px;
+  }
+  .letter form input {
+    width: 100%;
+  }
+}
 
-
-@media (max-width:1000px){
-    .grid-slider {
+@media (max-width: 1000px) {
+  .grid-slider {
     grid-template-columns: 1fr;
     grid-gap: 2em;
   }
 }
-@media(max-width:900px){
-  .split{
+@media (max-width: 900px) {
+  .split {
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 10px;
   }
-  .about-me{
+  .about-me {
     width: 100%;
   }
-  .languages{
+  .languages {
     width: 100%;
   }
 }
@@ -46,23 +54,49 @@
     all: revert;
   }
 }
+@media (min-width: 750px) {
+  .links span {
+    display: none;
+  }
+  .btn-contact span {
+    display: none;
+  }
+}
 
 @media (max-width: 750px) {
   .ul-link {
-    position: fixed;
-    right: 10px;
-    top: 210px;
-    z-index: 1000;
-    width: max-content;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    background: #436096;
+    width: 100%;
+    z-index: 10000;
+    height: 30vh;
+    overflow-y: scroll;
     display: none;
+  }
+  .links span {
+    display: inline-block;
+    text-align: right;
+    padding: 0 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #fff;
+  }
+  .ul-link .links li:hover {
+    background: #160a94;
+    color: #fff;
+    transition: var(--transition-move);
+    padding: 0 10px 0 15px;
   }
   .toggle-display {
     display: block;
   }
-  .links li a {
+  .ul-link .links li a {
     text-decoration: none;
     font-size: 1.2em !important;
     color: rgb(195, 195, 201) !important;
+    padding: 0 15px;
   }
   .link li a:active {
     color: #436096 !important;
@@ -79,24 +113,11 @@
   .links {
     display: flex;
     gap: 0.4em;
-    /* background: #436096; */
-    padding: 8px;
-    /* border: 2px solid #436096; */
     border-radius: 30px;
-    line-height: 3.5em;
+    line-height: 2.5em;
     transition: 0.4s ease;
     flex-direction: column;
-    place-items: center;
-    justify-content: center;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
   }
-  /* .links:hover {
-    all: revert;
-
-} */
   .links li:hover {
     all: revert;
   }
@@ -108,9 +129,19 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: 2em;
   }
-  /* form{
-    width: 100%;
-  } */
+  .btn-contact {
+    display: flex;
+    place-items: center;
+  }
+  .btn-contact button {
+    display: none;
+  }
+  .btn-contact span {
+    cursor: pointer;
+    font-size: 1.7em;
+    color: #fff;
+    display: inline-block;
+  }
 }
 @media (max-width: 700px) {
   .firms-flex {
@@ -187,20 +218,20 @@
   .left-angle-for-card {
     display: none;
   }
-  .cover-client{
+  .cover-client {
     transition: 0.4s ease;
   }
-  .section-cover{
+  .section-cover {
     background-color: transparent;
     border: none;
   }
-  .padding-wrapper{
+  .padding-wrapper {
     margin-top: 30px;
   }
-  .language{
+  .language {
     width: 100%;
   }
-  .language .progress-bar{
+  .language .progress-bar {
     width: inherit;
   }
 }
@@ -395,61 +426,61 @@
     height: 13vh;
   }
 }
-@media(max-width:390px){
-  .exp-container{
+@media (max-width: 390px) {
+  .exp-container {
     display: flex;
     flex-direction: column;
-    all:revert;
+    all: revert;
     display: none;
   }
-  .box-container{
+  .box-container {
     margin: 60px 50px;
   }
-  .box-container .box:last-child{
+  .box-container .box:last-child {
     margin-top: 60px;
   }
-  .box-container .box{
+  .box-container .box {
     line-height: 1.4;
     width: 100%;
   }
-  .box-container .box span{
+  .box-container .box span {
     font-size: 1.6em;
     color: #436096;
   }
-  .center-sch{
-    all:revert;
+  .center-sch {
+    all: revert;
   }
-  .center-exp{
-    all:revert;
+  .center-exp {
+    all: revert;
   }
-  .projects-box{
+  .projects-box {
     display: flex;
     flex-direction: column;
   }
-  .about-me .box{
+  .about-me .box {
     margin: revert;
     gap: revert;
     width: 100%;
   }
 }
-@media(min-width:390px){
-  .sch{
+@media (min-width: 390px) {
+  .sch {
     display: none;
   }
-  .exps{
-    display: none;
-  }
-}
-@media(min-width:1024px){
-  .right-angle-for-card{
-    display: none;
-  }
-  .left-angle-for-card{
+  .exps {
     display: none;
   }
 }
-@media(max-width:266px){
-  .two-boxes{
+@media (min-width: 1024px) {
+  .right-angle-for-card {
+    display: none;
+  }
+  .left-angle-for-card {
+    display: none;
+  }
+}
+@media (max-width: 266px) {
+  .two-boxes {
     flex-direction: column;
     gap: none;
   }

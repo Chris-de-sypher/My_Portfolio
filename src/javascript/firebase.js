@@ -58,50 +58,50 @@ const setData = () => {
     .catch((err) => console.log(err));
 };
 
-const link = document.querySelectorAll(".nav-link");
-const $a1 = document.querySelector(".a1");
-const $a2 = document.querySelector(".a2");
-const $a3 = document.querySelector(".a3");
-const $a4 = document.querySelector(".a4");
-let $a1S = "";
-let $a2S = "";
-let $a3S = "";
-let $a4S = "";
-const reffordb = ref(database);
+// const link = document.querySelectorAll(".nav-link");
+// const $a1 = document.querySelector(".a1");
+// const $a2 = document.querySelector(".a2");
+// const $a3 = document.querySelector(".a3");
+// const $a4 = document.querySelector(".a4");
+// let $a1S = "";
+// let $a2S = "";
+// let $a3S = "";
+// let $a4S = "";
+// const reffordb = ref(database);
 
-function resizeLinks() {
-  $a1S = $a1.innerHTML.substr(0, 34).trim().toString();
-  $a2S = $a2.innerHTML.substr(0, 34).trim().toString();
-  $a3S = $a3.innerHTML.substr(0, 33).trim().toString();
-  $a4S = $a4.innerHTML.substr(0, 37).trim().toString();
-  set(ref(database, "storeLink/"), {
-    Link1: $a1S,
-    Link2: $a2S,
-    Link3: $a3S,
-    Link4: $a4S,
-  })
-    .then(() => console.log("successful"))
-    .catch((err) => console.log(err));
+// function resizeLinks() {
+//   $a1S = $a1.innerHTML.substr(0, 34).trim().toString();
+//   $a2S = $a2.innerHTML.substr(0, 34).trim().toString();
+//   $a3S = $a3.innerHTML.substr(0, 33).trim().toString();
+//   $a4S = $a4.innerHTML.substr(0, 37).trim().toString();
+//   set(ref(database, "storeLink/"), {
+//     Link1: $a1S,
+//     Link2: $a2S,
+//     Link3: $a3S,
+//     Link4: $a4S,
+//   })
+//     .then(() => console.log("successful"))
+//     .catch((err) => console.log(err));
 
-  if (screen.width < 750) {
-    console.log("width is lesser than 750");
+//   if (screen.width < 750) {
+//     console.log("width is lesser than 750");
 
-    get(child(reffordb, "storeLink/"))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          $a1.innerHTML = snapshot.val().Link1;
-          $a2.innerHTML = snapshot.val().Link2;
-          $a3.innerHTML = snapshot.val().Link3;
-          $a4.innerHTML = snapshot.val().Link4;
-        } else {
-          console.log("Links not found in the database");
-        }
-      })
-      .catch((error) => console.log("Please try again" + error));
-  }
-}
+//     get(child(reffordb, "storeLink/"))
+//       .then((snapshot) => {
+//         if (snapshot.exists()) {
+//           $a1.innerHTML = snapshot.val().Link1;
+//           $a2.innerHTML = snapshot.val().Link2;
+//           $a3.innerHTML = snapshot.val().Link3;
+//           $a4.innerHTML = snapshot.val().Link4;
+//         } else {
+//           console.log("Links not found in the database");
+//         }
+//       })
+//       .catch((error) => console.log("Please try again" + error));
+//   }
+// }
 
-resizeLinks();
+// resizeLinks();
 
 function progressbar() {
   const elem = document.querySelector(".english");

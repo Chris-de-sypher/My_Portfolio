@@ -373,8 +373,9 @@ const UserSchool = [
 const school = document.querySelector(".school");
 const exp = document.querySelector(".experience");
 
-  const nesting = (schools) => {
-    const nest = schools.map((items) => {
+const nesting = (schools) => {
+  const nest = schools
+    .map((items) => {
       return `<div class="box">
                 <span>${items.icon}</span>
                 <h2>${items.education}</h2>
@@ -383,61 +384,68 @@ const exp = document.querySelector(".experience");
                 <p>${items.Year}</p>
             </div>`;
     })
-      .join('');
-    school.innerHTML = nest;
-  };
+    .join("");
+  school.innerHTML = nest;
+};
 
-  nesting(UserSchool);
+nesting(UserSchool);
 
-
-  const nested = (experience) => {
-    const nest = experience
-      .map((items) => {
-        return `<div class="box">
+const nested = (experience) => {
+  const nest = experience
+    .map((items) => {
+      return `<div class="box">
                 <span>${items.icon}</span>
                 <h2>${items.IT}</h2>
                 <p>${items.profession}</p>
                 <p>${items.location}</p>
                 <p>${items.Year}</p>
             </div>`;
-      })
-      .join("");
-    exp.innerHTML = nest;
-  };
+    })
+    .join("");
+  exp.innerHTML = nest;
+};
 
-  nested(UserExp);
+nested(UserExp);
 
+const remove_nav = document.getElementById("remove-nav");
+const bars = document.getElementById("bars");
 
-  // const displayText = () => {
-  //   const school = document.querySelector("#school");
-  //   const experience = document.querySelector("#experience");
-  //   const center_exp = document.querySelector(".exps");
-  //   const center_sch = document.querySelector(".sch");
+bars.addEventListener("click", function (e) {
+  e.preventDefault();
+  const navBar = document.querySelector(".ul-link");
+  navBar.style.display = "block";
+});
 
-  //   school.onclick = () => {
-  //     if (center_sch.classList.contains("hidden")) {
-  //       center_sch.classList.remove("hidden");
-  //       if (!center_exp.classList.contains("hidden")) {
-  //         center_exp.classList.add("hidden");
-  //       }
-  //       if (experience.classList.contains("active-bg")) {
-  //         experience.classList.remove("active-bg");
-  //         school.classList.add("active-bg");
-  //       }
-  //     }
-  //   };
+remove_nav.addEventListener("click", (e) => {
+  e.preventDefault();
+  const navBar = document.querySelector(".ul-link");
+  navBar.style.display = "none";
+});
 
-  //   experience.onclick = () => {
-  //     if (center_exp.classList.contains("hidden")) {
-  //       center_exp.classList.remove("hidden");
-  //       if (!center_sch.classList.contains("hidden")) {
-  //         center_sch.classList.add("hidden");
-  //       }
-  //       if (school.classList.contains("active-bg")) {
-  //         school.classList.remove("active-bg");
-  //         experience.classList.add("active-bg");
-  //       }
-  //     }
-  //   };
-  // };
-  // displayText();
+// newsletter
+const newsletter = document.querySelector(".newsletter");
+const twitterCard = document.querySelector(".twitter-card");
+window.addEventListener("load", (e) => {
+  newsletter.style.display = "flex";
+  twitterCard.style.display = "flex";
+  newsletter.classList.add("animate__bounceInDown");
+  twitterCard.classList.add("animate__backInLeft");
+});
+document.getElementById("deleteNews").addEventListener("click", (e) => {
+  e.preventDefault();
+  newsletter.style.display = 'none'
+});
+
+// twitter card
+document.getElementById("xremove").addEventListener("click", (e) => {
+  e.preventDefault();
+  twitterCard.style.display = "none";
+});
+
+window.addEventListener('click', (e) => {
+  e.preventDefault();
+  const x = document.getElementById("deleteNews");
+  x.closest('span').classList.add('animate')
+  const v = document.getElementById("xremove");
+  v.closest('span').classList.add('animate')
+})

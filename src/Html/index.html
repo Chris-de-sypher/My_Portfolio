@@ -31,19 +31,6 @@
     />
     <meta property="og:title" content="Christian Osuji portfolio" />
     <!-- open graph end -->
-    <!-- Add the slick-theme.css if you want default styling -->
-    <!-- <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-     Add the slick-theme.css if you want default styling 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    /> -->
-    <!-- font-awesome start -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -139,6 +126,9 @@
         <div class="ul-link">
           <!-- link container -->
           <ul class="links">
+            <span>
+              <i class="fa-solid fa-xmark" id="remove-nav"></i>
+            </span>
             <li class="link-head">
               <a href="#home" class="nav-link a1"
                 ><i class="fa-solid fa-house"></i> Home</a
@@ -172,6 +162,9 @@
               >Download CV</a
             >
           </button>
+          <span>
+            <i class="fa-solid fa-bars" id="bars"></i>
+          </span>
         </div>
       </header>
       <article class="text-pics section" id="home">
@@ -1057,6 +1050,37 @@
       </section>
       <!-- <br> -->
     </div>
+
+    <!-- newLetter -->
+    <div class="newsletter animate__animated">
+      <div class="letter">
+        <span>
+          <i class="fa-solid fa-xmark" id="deleteNews"></i>
+        </span>
+        <form>
+          <h2>Subscribe for our dialy news</h2>
+          <input type="text" placeholder="FullName" required />
+          <input type="email" placeholder="example@gmail.com" required />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <div class="twitter-card animate__animated">
+      <span class="xremove">
+        <i class="fa-solid fa-xmark" id="xremove"></i>
+      </span>
+      <div class="cards">
+        <img src="christian.png" alt="" />
+        <p>follow me on twitter</p>
+        <span
+          ><a href="https://twitter.com/chris-de-sypher"
+            >@chris_de_sypher</a
+          ></span
+        >
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="footer-grid">
         <div class="contacts">
@@ -1150,5 +1174,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js" integrity="sha512-kwz4O9ZHi+MTJEvhjK8qC88n0+J1Hfh3o85NYJAuaZbLffDsrZxMhwi3Htzn3MVrttScMCIFz/O2KEyF9Ho/eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

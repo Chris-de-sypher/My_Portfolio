@@ -114,7 +114,7 @@ body::-webkit-scrollbar {
   transition: var(--transition-move);
 }
 .text-pics {
-  margin-top: 80px;
+  margin-top: 100px;
   transition: var(--transition-move);
 }
 .text-pics .text-grid-pics {
@@ -201,9 +201,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
 }
-/* marquee{
-    margin: 10px;
-} */
+
 marquee p {
   color: #436096;
   font-size: 1.8rem;
@@ -2009,5 +2007,136 @@ iframe {
     justify-content: center;
     place-items: center;
     font-size: 0.8em;
+  }
+}
+
+
+/* newletter */
+.newsletter{
+  position: fixed;
+  background: rgba(0, 0, 0, 0.49);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  place-items: center;
+  transition: var(--transition-move);
+}
+.letter{
+  width: 500px;
+  /* height: 200px; */
+  background: var(--bg-color-black);
+  border-radius: 10px;
+  position: relative;
+}
+.letter span{
+  position: absolute;
+  right: -7px;
+  top: -10px;
+  background: #0d3073;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  color: #fff;
+}
+.letter form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.letter form input{
+  /* margin-top: 10p; */
+  height: 6vh;
+  outline: none;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  background: transparent;
+  color: #fff;
+}
+.letter form input::placeholder{
+  color: #fff;
+}
+
+.letter form h2{
+  font-size: 1.2em;
+  color: #fff;
+  font-family: sans-serif;
+}
+.letter form input[type='submit']{
+  background: var(--bg-color-white);
+  cursor: pointer;
+  color: #000;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+.twitter-card{
+  width: 180px;
+  background: #0d3073;
+  position: fixed;
+  left: 10px;
+  bottom: 20px;
+  height: auto;
+  border-radius: 10px;
+  display: none;
+}
+.twitter-card .cards img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+}
+.twitter-card .cards{
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.4em; */
+  justify-content: center;
+  padding: 10px;
+  place-items: center;
+  align-items: center;
+}
+.twitter-card .cards p{
+  font-family: var(--other-font2);
+}
+.twitter-card .cards span a{
+  color: #fff;
+}
+.twitter-card .xremove{
+    position: absolute;
+  right: -7px;
+  top: -10px;
+  background: #0d3073;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  color: #fff;
+}
+.animate{
+  animation: blink 0.4s infinite;
+
+}
+@keyframes blink {
+  from{
+    background: red;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  to{
+    background: red;
+    animation-fill-mode: forwards;
   }
 }

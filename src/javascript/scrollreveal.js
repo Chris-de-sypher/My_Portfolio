@@ -83,8 +83,6 @@ if (screen.width < 700) {
     sliders[slideIndexs - 1].style.display = "block";
   }
 
-  const btn_filter = (document.querySelector(".btn-filter").style.display =
-    "none");
   const wrapper_page = document.querySelector(".wrapper-page");
 
   setInterval(() => {
