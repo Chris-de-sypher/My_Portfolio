@@ -442,10 +442,3 @@ document.getElementById("xremove").addEventListener("click", (e) => {
   twitterCard.style.display = "none";
 });
 
-window.addEventListener('click', (e) => {
-  e.preventDefault();
-  const x = document.getElementById("deleteNews");
-  x.closest('span').classList.add('animate')
-  const v = document.getElementById("xremove");
-  v.closest('span').classList.add('animate')
-})
