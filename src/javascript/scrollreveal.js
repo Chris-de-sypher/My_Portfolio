@@ -52,7 +52,7 @@ ScrollReveal().reveal(".section-cover", {
   origin: "bottom",
 });
 ScrollReveal().reveal(".text", { delay: 200, origin: "right" });
-ScrollReveal({ distance:'45px', reset: false }).reveal(".fetching", {
+ScrollReveal({ distance: "45px", reset: false }).reveal(".fetching", {
   delay: 150,
   origin: "left",
 });
@@ -111,53 +111,99 @@ if (screen.width < 700) {
   }, 100);
 }
 
-(function () {
-  if (screen.width <= 380) {
-    var slideIndex = 0;
-    showSlides(slideIndex);
-    let slideInterval;
+// // (function () {
+// //   try{
+// // if (screen.width <= 380) {Onetime }
+// //     var slideIndex = 0;
+// //     showSlides(slideIndex);
+// //     let slideInterval;
 
-    const leftangle = document.querySelector(".leftangle");
-    leftangle.addEventListener("click", prev);
-    function prev() {
-      showSlides((slideIndex -= 1));
-    }
-    const rightangle = document.querySelector(".rightangle");
-    rightangle.addEventListener("click", next);
-    function next() {
-      showSlides((slideIndex += 1));
-    }
+// //     const leftangle = document.querySelector(".leftangle");
+// //     leftangle.addEventListener("click", prev);
+// //     function prev() {
+// //       showSlides((slideIndex -= 1));
+// //     }
+// //     const rightangle = document.querySelector(".rightangle");
+// //     rightangle.addEventListener("click", next);
+// //     function next() {
+// //       showSlides((slideIndex += 1));
+// //     }
 
-    function startSlideShow() {
-      slideInterval = setInterval(function () {
-        next();
-        prev();
-      }, 2000); // Adjust the interval (in milliseconds) as desired
-    }
+// //     function startSlideShow() {
+// //       slideInterval = setInterval(function () {
+// //         next();
+// //         prev();
+// //       }, 2000); // Adjust the interval (in milliseconds) as desired
+// //     }
 
-    function showSlides(n) {
-      var slides = document.getElementsByClassName("box");
+// //     function showSlides(n) {
+// //       var slides = document.getElementsByClassName("box");
 
-      if (n >= slides.length) {
-        slideIndex = 0;
-      } else if (n < 0) {
-        slideIndex = slides.length - 1;
-      }
+// //       if (n >= slides.length) {
+// //         slideIndex = 0;
+// //       } else if (n < 0) {
+// //         slideIndex = slides.length - 1;
+// //       }
 
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+// //       for (var i = 0; i < slides.length; i++) {
+// //         slides[i].style.display = "none";
+// //       }
 
-      slides[slideIndex].style.display = "flex";
-    }
+// //       slides[slideIndex].style.display = "flex";
+// //     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      startSlideShow();
-      showSlides(slideIndex);
-    });
-  }
-})();
+// //     document.addEventListener("DOMContentLoaded", function () {
+// //       startSlideShow();
+// //       showSlides(slideIndex);
+// //     });
+// //   }
+// //   }
+// //   catch (err) {
+// //     console.log(err)
+// //   }
+// // }());
 
+// // function Onetime() {
+//   var slideIndex = 0;
+//   let slideInterval;
+//   showSlides(slideIndex);
 
+//   const leftangle = document.querySelector(".leftangle");
+//   leftangle.addEventListener("click", prev);
+//   function prev() {
+//     showSlides((slideIndex -= 1));
+//   }
+//   const rightangle = document.querySelector(".rightangle");
+//   rightangle.addEventListener("click", next);
+//   function next() {
+//     showSlides((slideIndex += 1));
+//   }
 
+//   function startSlideShow() {
+//     slideInterval = setInterval(function () {
+//       next();
+//       prev();
+//     }, 2000); // Adjust the interval (in milliseconds) as desired
+//   }
 
+//   function showSlides(n) {
+//     var slides = document.getElementsByClassName("box");
+
+//     if (n >= slides.length) {
+//       slideIndex = 0;
+//     } else if (n < 0) {
+//       slideIndex = slides.length - 1;
+//     }
+
+//     for (var i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//     }
+
+//     slides[slideIndex].style.display = "flex";
+//   }
+
+//   document.addEventListener("DOMContentLoaded", function () {
+//     startSlideShow();
+//     showSlides(slideIndex);
+//   });
+// // }

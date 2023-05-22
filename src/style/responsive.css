@@ -385,9 +385,6 @@
   .btn-call button:hover i {
     all: revert;
   }
-  @media (max-width:240px){
-    
-  }
 }
 @media (max-width: 290px) and (max-height: 320px) {
   .section-grid-for-chris form input,
@@ -404,9 +401,6 @@
     flex-direction: column;
     all:revert;
     display: none;
-  }
-  .center-sch{
-    all:revert;
   }
   .box-container{
     margin: 60px 50px;
@@ -428,8 +422,14 @@
   .center-exp{
     all:revert;
   }
-  .exp-container{
-    display: none;
+  .projects-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me .box{
+    margin: revert;
+    gap: revert;
+    width: 100%;
   }
 }
 @media(min-width:390px){
@@ -446,5 +446,11 @@
   }
   .left-angle-for-card{
     display: none;
+  }
+}
+@media(max-width:266px){
+  .two-boxes{
+    flex-direction: column;
+    gap: none;
   }
 }

@@ -202,17 +202,7 @@ const displayText = () => {
       }
     }
   };
-  if (screen.width <= 266) {
-    school.classList.add("hidden");
-    experience.onclick = () => {
-      school.classList.remove("hidden");
-      experience.classList.add("hidden");
-    };
-    school.onclick = () => {
-      experience.classList.remove("hidden");
-      school.classList.add("hidden");
-    };
-  }
+
 };
 displayText();
 
@@ -335,5 +325,3 @@ function checkFocus() {
   };
 }
 checkFocus();
-
-

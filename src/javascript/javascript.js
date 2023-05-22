@@ -406,3 +406,38 @@ const exp = document.querySelector(".experience");
   };
 
   nested(UserExp);
+
+
+  // const displayText = () => {
+  //   const school = document.querySelector("#school");
+  //   const experience = document.querySelector("#experience");
+  //   const center_exp = document.querySelector(".exps");
+  //   const center_sch = document.querySelector(".sch");
+
+  //   school.onclick = () => {
+  //     if (center_sch.classList.contains("hidden")) {
+  //       center_sch.classList.remove("hidden");
+  //       if (!center_exp.classList.contains("hidden")) {
+  //         center_exp.classList.add("hidden");
+  //       }
+  //       if (experience.classList.contains("active-bg")) {
+  //         experience.classList.remove("active-bg");
+  //         school.classList.add("active-bg");
+  //       }
+  //     }
+  //   };
+
+  //   experience.onclick = () => {
+  //     if (center_exp.classList.contains("hidden")) {
+  //       center_exp.classList.remove("hidden");
+  //       if (!center_sch.classList.contains("hidden")) {
+  //         center_sch.classList.add("hidden");
+  //       }
+  //       if (school.classList.contains("active-bg")) {
+  //         school.classList.remove("active-bg");
+  //         experience.classList.add("active-bg");
+  //       }
+  //     }
+  //   };
+  // };
+  // displayText();

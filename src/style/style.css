@@ -296,6 +296,11 @@ marquee p:last-child {
   text-align: left;
   transition: var(--transition-move);
   border-radius: none;
+  word-wrap: break-word;
+  -webkit-transition: var(--transition-move);
+  -moz-transition: var(--transition-move);
+  -ms-transition: var(--transition-move);
+  -o-transition: var(--transition-move);
 }
 @media (max-width: 600px) {
   .card-wrappers .cards-for-page {
