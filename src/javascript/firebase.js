@@ -102,3 +102,238 @@ function resizeLinks() {
 }
 
 resizeLinks();
+
+function progressbar() {
+  const elem = document.querySelector(".english");
+  const percent = document.querySelector(".percent1");
+  let width = 20;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 95) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      percent.innerHTML = width * 1 + "%";
+    }
+  }
+}
+function progressbartwo() {
+  const elem = document.querySelector(".french");
+  const percent = document.querySelector(".percent2");
+  let width = 20;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 40) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      percent.innerHTML = width * 1 + "%";
+    }
+  }
+}
+function progressbarthree() {
+  const elem = document.querySelector(".spanish");
+  const percent = document.querySelector(".percent3");
+  let width = 20;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 30) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      percent.innerHTML = width * 1 + "%";
+    }
+  }
+}
+function progressbarfour() {
+  const elem = document.querySelector(".com");
+  const percent = document.querySelector(".percent4");
+  let width = 20;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      percent.innerHTML = width * 1 + "%";
+    }
+  }
+}
+
+window.onload = () => {
+  progressbar();
+  progressbartwo();
+  progressbarthree();
+  progressbarfour();
+};
+
+const displayText = () => {
+  const school = document.querySelector("#school");
+  const experience = document.querySelector("#experience");
+  const center_exp = document.querySelector(".center-exp");
+  const center_sch = document.querySelector(".center-sch");
+
+  school.onclick = () => {
+    if (center_sch.classList.contains("hidden")) {
+      center_sch.classList.remove("hidden");
+      if (!center_exp.classList.contains("hidden")) {
+        center_exp.classList.add("hidden");
+      }
+      if (experience.classList.contains("active-bg")) {
+        experience.classList.remove("active-bg");
+        school.classList.add("active-bg");
+      }
+    }
+  };
+
+  experience.onclick = () => {
+    if (center_exp.classList.contains("hidden")) {
+      center_exp.classList.remove("hidden");
+      if (!center_sch.classList.contains("hidden")) {
+        center_sch.classList.add("hidden");
+      }
+      if (school.classList.contains("active-bg")) {
+        school.classList.remove("active-bg");
+        experience.classList.add("active-bg");
+      }
+    }
+  };
+  if (screen.width <= 266) {
+    school.classList.add("hidden");
+    experience.onclick = () => {
+      school.classList.remove("hidden");
+      experience.classList.add("hidden");
+    };
+    school.onclick = () => {
+      experience.classList.remove("hidden");
+      school.classList.add("hidden");
+    };
+  }
+};
+displayText();
+
+const html_btn = document.getElementById("html-btn");
+const css_btn = document.getElementById("css-btn");
+const js_btn = document.getElementById("js-btn");
+
+function codingEditors() {
+  const file_display = document.querySelector(".file-display");
+
+  css_btn.onclick = () => {
+    const css = document.getElementById("css");
+    const divTwo = document.querySelector("#two");
+    css.classList.toggle("hidden");
+    divTwo.classList.toggle("hidden");
+  };
+
+  js_btn.onclick = () => {
+    const js = document.getElementById("js");
+    const divThree = document.querySelector("#three");
+    js.classList.toggle("hidden");
+    divThree.classList.toggle("hidden");
+  };
+
+  html_btn.onclick = () => {
+    const html = document.getElementById("html");
+    const divOne = document.querySelector("#ones");
+    html.classList.toggle("hidden");
+    divOne.classList.toggle("hidden");
+  };
+}
+codingEditors();
+
+async function removesfile() {
+  const file_display = document.querySelector(".file-display");
+  const css = document.getElementById("css");
+  const html = document.getElementById("html");
+  const js = document.getElementById("js");
+
+  const divOne = document.querySelector("#ones");
+  const divTwo = document.querySelector("#two");
+  const divThree = document.querySelector("#three");
+  console.log(divOne);
+
+  divOne.onclick = (e) => {
+    const xmark = (e.target.id = "removeOne");
+    if (xmark) {
+      divOne.classList.add("hidden");
+      html.classList.add("hidden");
+      codingEditors();
+    } else {
+      alert("failed to execute script");
+    }
+  };
+
+  divTwo.onclick = async (e) => {
+    const xmark = (e.target.id = "removeOne");
+    if (xmark) {
+      divTwo.classList.add("hidden");
+      css.classList.add("hidden");
+      codingEditors();
+    } else {
+      alert("failed to execute script");
+    }
+  };
+
+  divThree.onclick = (e) => {
+    const xmark = (e.target.id = "removeOne");
+    if (xmark) {
+      divThree.classList.add("hidden");
+      js.classList.add("hidden");
+      codingEditors();
+    } else {
+      alert("failed to execute script");
+    }
+  };
+}
+
+removesfile();
+
+// checking if it's on focus
+function checkFocus() {
+  const css = document.getElementById("css");
+  const html = document.getElementById("html");
+  const js = document.getElementById("js");
+
+  // file remover
+  const divOne = document.querySelector("#ones");
+  const childOne = divOne.querySelector("span");
+  const divTwo = document.querySelector("#two");
+  const childTwo = divTwo.querySelector("span");
+  const divThree = document.querySelector("#three");
+  const childThree = divThree.querySelector("span");
+
+  html.onfocus = () => {
+    html_btn.classList.add("active-bg");
+    childOne.classList.add("focus");
+  };
+  html.onblur = () => {
+    html_btn.classList.remove("active-bg");
+    childOne.classList.remove("focus");
+  };
+
+  css.onfocus = () => {
+    css_btn.classList.add("active-bg");
+    childTwo.classList.add("focus");
+  };
+  css.onblur = () => {
+    css_btn.classList.remove("active-bg");
+    childTwo.classList.remove("focus");
+  };
+
+  js.onfocus = () => {
+    js_btn.classList.add("active-bg");
+    childThree.classList.add("focus");
+  };
+  js.onblur = () => {
+    js_btn.classList.remove("active-bg");
+    childThree.classList.remove("focus");
+  };
+}
+checkFocus();
+
+

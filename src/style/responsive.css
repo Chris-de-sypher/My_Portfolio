@@ -1,5 +1,26 @@
 /** @format */
 
+
+
+@media (max-width:1000px){
+    .grid-slider {
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+  }
+}
+@media(max-width:900px){
+  .split{
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 10px;
+  }
+  .about-me{
+    width: 100%;
+  }
+  .languages{
+    width: 100%;
+  }
+}
 @media (max-width: 810px) {
   .text-grid-pics {
     display: flex !important;
@@ -87,6 +108,9 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: 2em;
   }
+  /* form{
+    width: 100%;
+  } */
 }
 @media (max-width: 700px) {
   .firms-flex {
@@ -97,10 +121,7 @@
     place-items: revert;
     grid-gap: 2em;
   }
-  .grid-slider {
-    grid-template-columns: 1fr;
-    grid-gap: 2em;
-  }
+
   .section-grid-for-chris form::after {
     all: revert;
   }
@@ -109,7 +130,7 @@
     gap: 3em;
   }
   .section-grid-for-chris form {
-    width: 240px;
+    width: 100%;
   }
   .links-for-contact {
     display: flex;
@@ -168,6 +189,19 @@
   }
   .cover-client{
     transition: 0.4s ease;
+  }
+  .section-cover{
+    background-color: transparent;
+    border: none;
+  }
+  .padding-wrapper{
+    margin-top: 30px;
+  }
+  .language{
+    width: 100%;
+  }
+  .language .progress-bar{
+    width: inherit;
   }
 }
 @media (max-width: 360px) {
@@ -277,9 +311,9 @@
     background: none;
     border: none;
   }
-  .section-grid-for-chris form {
+  /* .section-grid-for-chris form {
     width: 220px !important;
-  }
+  } */
   .section-grid-for-chris form h3 {
     font-size: 0.9em;
   }
@@ -362,5 +396,55 @@
   }
   .section-grid-for-chris form button {
     height: 13vh;
+  }
+}
+@media(max-width:390px){
+  .exp-container{
+    display: flex;
+    flex-direction: column;
+    all:revert;
+    display: none;
+  }
+  .center-sch{
+    all:revert;
+  }
+  .box-container{
+    margin: 60px 50px;
+  }
+  .box-container .box:last-child{
+    margin-top: 60px;
+  }
+  .box-container .box{
+    line-height: 1.4;
+    width: 100%;
+  }
+  .box-container .box span{
+    font-size: 1.6em;
+    color: #436096;
+  }
+  .center-sch{
+    all:revert;
+  }
+  .center-exp{
+    all:revert;
+  }
+  .exp-container{
+    display: none;
+  }
+}
+@media(min-width:390px){
+  .sch{
+    display: none;
+  }
+  .exps{
+    display: none;
+  }
+}
+@media(min-width:1024px){
+  .right-angle-for-card{
+    display: none;
+  }
+  .left-angle-for-card{
+    display: none;
   }
 }

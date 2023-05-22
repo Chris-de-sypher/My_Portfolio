@@ -9,6 +9,7 @@ const serverless = require("serverless-http");
 const router = express.Router();
 const hostname = '0.0.0.0';
 
+
 app.use(express.static(resolve(__dirname, "./src/images")));
 app.use(express.static(resolve(__dirname, "./src/style")));
 app.use(express.static(resolve(__dirname, "./src/javascript")));
@@ -25,11 +26,13 @@ router.get("./portfolio", (req, res) => {
   }
 });
 
+
 router.all("*", (req, res) => {
   res.status(404).sendFile(resolve(__dirname, "./src/Html/error.html"));
 });
 
 app.use(router);
+
 
 app.listen(PORT, hostname, () => {
   console.log("user hit the resource");
@@ -37,4 +40,4 @@ app.listen(PORT, hostname, () => {
 
 
 
-// module.exports.handler = serverless(app);
+module.exports.handler = serverless(app);

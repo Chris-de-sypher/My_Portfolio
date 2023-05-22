@@ -95,8 +95,7 @@ var swiper = new Swiper(".mySwiper", {
 
 const ClientProfile = [
   {
-    heading:
-      "Such an amazing time working with chris.",
+    heading: "Such an amazing time working with chris.",
     comment:
       "I can't really expressed how glad I am working with christian..lol tho am a bit naive when working with him because he is a man of principle. Love you chris!",
     clientPic: "baby.jpeg",
@@ -112,8 +111,7 @@ const ClientProfile = [
     clientProfile: "Developer @Devops",
   },
   {
-    heading:
-      "Sending gratitude to Chris",
+    heading: "Sending gratitude to Chris",
     comment:
       "I never thought working with you would be fun but indeed it was and not only that, I was able to learn some things from you. Thanks a lot Chris.",
     clientPic: "john.jpg",
@@ -293,29 +291,118 @@ $showless.onclick = (e) => {
   $showles.classList.toggle("bt-inject");
 };
 
-const navbar = document.querySelector("#navbar");
-const link = document.querySelectorAll(".nav-link");
-const sec = document.querySelectorAll(".section");
-console.log(navbar);
+// const navbar = document.querySelector("#navbar");
+// const link = document.querySelectorAll(".nav-link");
+// const sec = document.querySelectorAll(".section");
+// console.log(navbar);
 
-function showcolor() {
-  let len = sec.length;
-  while (--len && window.scrollY + 127 < sec[len].offsetTop) {}
-  link.forEach((anchor) => anchor.classList.remove("inactives"));
-  link[len].classList.add("inactives");
-}
-showcolor();
-window.addEventListener("scroll", showcolor);
+// function showcolor() {
+//   let len = sec.length;
+//   while (--len && window.scrollY + 127 < sec[len].offsetTop) {}
+//   link.forEach((anchor) => anchor.classList.remove("inactives"));
+//   link[len].classList.add("inactives");
+// }
+// showcolor();
+// window.addEventListener("scroll", showcolor);
+
+// const ulLinks = document.querySelector(".ul-link");
+
+// window.onscroll = () => {
+//   ulLinks.classList.toggle("toggle-display", scrollY  > 60);
+// };
+
+// if (screen.width <= 340) {
+//   let slideIndexs = 1;
+//   showSlider(slideIndexs);
+
+//   // Next/previous controls
+//   function plusSliding(n) {
+//     showSlider((slideIndexs += n));
+//   }
+
+//   function showSlider(n) {
+//     let i;
+//     let sliders = document.getElementsByClassName(".box");
+//     if (n > sliders.length) {
+//       slideIndexs = 1;
+//     }
+//     if (n < 1) {
+//       slideIndexs = sliders.length;
+//     }
+//     for (i = 0; i < sliders.length; i++) {
+//       sliders[i].style.display = "none";
+//     }
+//     sliders[slideIndexs - 1].style.display = "block";
+//   }
+// }
+
+const UserExp = [
+  {
+    Year: "May 2022 - Aug",
+    IT: "IT Student",
+    profession: "Junior software engineer",
+    location: "Benin republic, Cotonou",
+    icon: '<i class="fa-solid fa-briefcase"></i>',
+  },
+  {
+    Year: "Sep 2022 - Present",
+    IT: "GDSC lead",
+    profession: "Community lead",
+    location: "Benin republic, Cotonou",
+    icon: '<i class="fa-solid fa-briefcase"></i>',
+  },
+];
+
+const UserSchool = [
+  {
+    Year: "Sep 2014 - 2020",
+    education: "High School",
+    school: "Vineli Secondary sch",
+    location: "Lagos state, Nigeria",
+    icon: '<i class="fa-solid fa-graduation-cap"></i>',
+  },
+  {
+    Year: "Jan 2021 - 2023",
+    education: "College, BSc",
+    school: "ESTAM University",
+    location: "Benin republic, Cotonou",
+    icon: '<i class="fa-solid fa-user-graduate"></i>',
+  },
+];
+
+const school = document.querySelector(".school");
+const exp = document.querySelector(".experience");
+
+  const nesting = (schools) => {
+    const nest = schools.map((items) => {
+      return `<div class="box">
+                <span>${items.icon}</span>
+                <h2>${items.education}</h2>
+                <p>${items.school}</p>
+                <p>${items.location}</p>
+                <p>${items.Year}</p>
+            </div>`;
+    })
+      .join('');
+    school.innerHTML = nest;
+  };
+
+  nesting(UserSchool);
 
 
-const ulLinks = document.querySelector(".ul-link");
+  const nested = (experience) => {
+    const nest = experience
+      .map((items) => {
+        return `<div class="box">
+                <span>${items.icon}</span>
+                <h2>${items.IT}</h2>
+                <p>${items.profession}</p>
+                <p>${items.location}</p>
+                <p>${items.Year}</p>
+            </div>`;
+      })
+      .join("");
+    exp.innerHTML = nest;
+  };
 
-window.onscroll = () => {
-  ulLinks.classList.toggle("toggle-display", scrollY  > 60);
-};
-
-
-
-
-
-
+  nested(UserExp);
