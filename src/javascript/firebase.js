@@ -58,51 +58,6 @@ const setData = () => {
     .catch((err) => console.log(err));
 };
 
-// const link = document.querySelectorAll(".nav-link");
-// const $a1 = document.querySelector(".a1");
-// const $a2 = document.querySelector(".a2");
-// const $a3 = document.querySelector(".a3");
-// const $a4 = document.querySelector(".a4");
-// let $a1S = "";
-// let $a2S = "";
-// let $a3S = "";
-// let $a4S = "";
-// const reffordb = ref(database);
-
-// function resizeLinks() {
-//   $a1S = $a1.innerHTML.substr(0, 34).trim().toString();
-//   $a2S = $a2.innerHTML.substr(0, 34).trim().toString();
-//   $a3S = $a3.innerHTML.substr(0, 33).trim().toString();
-//   $a4S = $a4.innerHTML.substr(0, 37).trim().toString();
-//   set(ref(database, "storeLink/"), {
-//     Link1: $a1S,
-//     Link2: $a2S,
-//     Link3: $a3S,
-//     Link4: $a4S,
-//   })
-//     .then(() => console.log("successful"))
-//     .catch((err) => console.log(err));
-
-//   if (screen.width < 750) {
-//     console.log("width is lesser than 750");
-
-//     get(child(reffordb, "storeLink/"))
-//       .then((snapshot) => {
-//         if (snapshot.exists()) {
-//           $a1.innerHTML = snapshot.val().Link1;
-//           $a2.innerHTML = snapshot.val().Link2;
-//           $a3.innerHTML = snapshot.val().Link3;
-//           $a4.innerHTML = snapshot.val().Link4;
-//         } else {
-//           console.log("Links not found in the database");
-//         }
-//       })
-//       .catch((error) => console.log("Please try again" + error));
-//   }
-// }
-
-// resizeLinks();
-
 function progressbar() {
   const elem = document.querySelector(".english");
   const percent = document.querySelector(".percent1");
@@ -202,7 +157,6 @@ const displayText = () => {
       }
     }
   };
-
 };
 displayText();
 
@@ -325,3 +279,77 @@ function checkFocus() {
   };
 }
 checkFocus();
+
+// newletter firebase submit
+const newsletter = document.getElementById("newsletter");
+const newstext = document.getElementById("newstext");
+const newsemail = document.getElementById("newsemail");
+
+newsletter.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (newstext.value == "" || newsemail.value == "") {
+    return false;
+  } else {
+    return sendform();
+  }
+});
+
+const sendform = () => {
+  set(ref(database, "/newsletter/" + newstext.value), {
+    name: newstext.value,
+    email: newsemail.value,
+  })
+    .then(() => {
+      newsletter.innerHTML = `<h1>Successful<h1>`;
+    })
+    .catch((err) => console.log(err));
+};
+
+// meeting
+const meeting = document.querySelector(".meeting");
+let meetClick = 0;
+
+meeting.addEventListener("click", callmeeting);
+
+function callmeeting() {
+  meetClick++;
+  console.log(meetClick);
+  if (meetClick >= 1) {
+    const meeting_link = document.querySelector("#meeting-link");
+    meeting_link.style.visibility = "visible";
+    meeting.style.display = "none";
+    meeting_link.addEventListener("input", (e) => {
+      e.preventDefault();
+      document.querySelector("#sendLink").style.visibility = "visible";
+    });
+  }
+}
+
+// email
+document.querySelector("#sendLink").addEventListener("click", sendEmail);
+function sendEmail(e) {
+  e.preventDefault();
+  if (document.querySelector("#meeting-link").value == "") {
+    return false;
+  } else {
+    return sendMeetingLink();
+  }
+}
+const meetingLink = document.querySelector("#meeting-link");
+
+const sendMeetingLink = () => {
+  set(ref(database, "/meetingLink/" + meetingLink.value), {
+    name: meetingLink.value,
+  })
+    .then(() => {
+      document.querySelector("#sendLink").value = "Sent";
+      document.querySelector("#sendLink").style.background = "green";
+      document.querySelector("#sendLink").disabled = true;
+      setTimeout(() => {
+        meeting.style.display = "block";
+        document.querySelector("#sendLink").style.display = "none";
+        document.querySelector("#meeting-link").style.display = "none";
+      }, 2000);
+    })
+    .catch((err) => console.log(err));
+};

@@ -291,51 +291,6 @@ $showless.onclick = (e) => {
   $showles.classList.toggle("bt-inject");
 };
 
-// const navbar = document.querySelector("#navbar");
-// const link = document.querySelectorAll(".nav-link");
-// const sec = document.querySelectorAll(".section");
-// console.log(navbar);
-
-// function showcolor() {
-//   let len = sec.length;
-//   while (--len && window.scrollY + 127 < sec[len].offsetTop) {}
-//   link.forEach((anchor) => anchor.classList.remove("inactives"));
-//   link[len].classList.add("inactives");
-// }
-// showcolor();
-// window.addEventListener("scroll", showcolor);
-
-// const ulLinks = document.querySelector(".ul-link");
-
-// window.onscroll = () => {
-//   ulLinks.classList.toggle("toggle-display", scrollY  > 60);
-// };
-
-// if (screen.width <= 340) {
-//   let slideIndexs = 1;
-//   showSlider(slideIndexs);
-
-//   // Next/previous controls
-//   function plusSliding(n) {
-//     showSlider((slideIndexs += n));
-//   }
-
-//   function showSlider(n) {
-//     let i;
-//     let sliders = document.getElementsByClassName(".box");
-//     if (n > sliders.length) {
-//       slideIndexs = 1;
-//     }
-//     if (n < 1) {
-//       slideIndexs = sliders.length;
-//     }
-//     for (i = 0; i < sliders.length; i++) {
-//       sliders[i].style.display = "none";
-//     }
-//     sliders[slideIndexs - 1].style.display = "block";
-//   }
-// }
-
 const UserExp = [
   {
     Year: "May 2022 - Aug",
@@ -433,7 +388,7 @@ window.addEventListener("load", (e) => {
 });
 document.getElementById("deleteNews").addEventListener("click", (e) => {
   e.preventDefault();
-  newsletter.style.display = 'none'
+  newsletter.style.display = "none";
 });
 
 // twitter card

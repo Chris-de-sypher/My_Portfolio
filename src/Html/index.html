@@ -109,6 +109,19 @@
         right: 0;
         margin: auto;
       }
+
+      #meeting-link, #sendLink{
+        padding: 8px 12px;
+        background: transparent;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        color: #fff;
+        visibility: hidden;
+      }
+      #sendLink:hover{
+        background: #160a94;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -171,20 +184,20 @@
         <div class="text-grid-pics">
           <div class="author-text">
             <h1>
-              <span>Software Developer</span> <br />
-              Developer Adovocate <br />
+              <span>FullStack Developer</span> <br />
+              Developer Advocate <br />
               ...
             </h1>
             <p>
               I'm Christian Osuji-- a software developer and web developer who
-              works as freelancer and also take on projects for big firms....let
+              works as freelancer and also take on projects for firms....let
               me be your developer.
             </p>
             <div class="btn-call">
-              <button type="button">
+              <button type="button" class="meeting">
                 <a
                   href="https://meet.google.com/new?hs=180&amp;authuser=0"
-                  target="_top"
+                  target="_blank"
                   class="J-Ke n0"
                   title="Start a meeting"
                   aria-label="Start a meeting"
@@ -194,6 +207,8 @@
                 >
                 <span><i class="fa-solid fa-laptop"></i></span>
               </button>
+              <input type="text" name="" id="meeting-link" placeholder="input meeting link">
+              <input type="button" value="Send link" id="sendLink">
             </div>
           </div>
           <div class="author-picture">
@@ -232,7 +247,7 @@
           <p>
             IF you are looking for software-web developer then don't hesitate
             <br />
-            to book me down, here are some excited services i render!
+            to book me down, here are some exciting services i render!
           </p>
           <div class="card-wrappers">
             <div class="center-cards">
@@ -380,8 +395,7 @@
                 how I help my client <span>grow their revenue</span>
               </h1>
               <p>
-                I discover this process through working with more than 10+
-                software industry that's why you can trust blindly and trust me
+                I discover this process through working on various projects that's why you can trust blindly and trust me
                 I deliver the best
               </p>
               <div class="bts">
@@ -1057,10 +1071,10 @@
         <span>
           <i class="fa-solid fa-xmark" id="deleteNews"></i>
         </span>
-        <form>
+        <form id="newsletter">
           <h2>Subscribe for our dialy news</h2>
-          <input type="text" placeholder="FullName" required />
-          <input type="email" placeholder="example@gmail.com" required />
+          <input type="text" placeholder="FullName" id="newstext" required />
+          <input type="email" placeholder="example@gmail.com" id="newsemail" required />
           <input type="submit" value="submit" />
         </form>
       </div>
@@ -1071,7 +1085,7 @@
         <i class="fa-solid fa-xmark" id="xremove"></i>
       </span>
       <div class="cards">
-        <img src="christian.png" alt="" />
+        <img src="twitter p.jpg" alt="" />
         <p>follow me on twitter</p>
         <span
           ><a href="https://twitter.com/chris-de-sypher"

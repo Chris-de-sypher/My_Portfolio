@@ -157,6 +157,7 @@ body::-webkit-scrollbar {
   -moz-transition: var(--transition-move);
   -ms-transition: var(--transition-move);
   -o-transition: var(--transition-move);
+  word-wrap: break-word;
 }
 .cards:hover {
   background-color: transparent;
