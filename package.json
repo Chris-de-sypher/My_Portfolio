@@ -4,7 +4,7 @@
   "description": "Christian portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "dev": ""
   },
   "repository": {
@@ -20,7 +20,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "express-cli": "^0.0.1",
-    "netlify-lambda": "^2.0.16",
+    "netlify-lambda": "^0.4.0",
     "serverless-http": "^3.2.0",
     "slick-carousel": "^1.8.1"
   },

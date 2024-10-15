@@ -142,7 +142,7 @@ const Portfolio = [
   {
     image: "A Chic Logo Design for The School of Styling - Saffron Avenue.jpeg",
     url: "A Chic Logo Design for The School of Styling - Saffron Avenue.jpeg",
-    title: "Follower",
+    title: "Flower",
     categories: "Graphics",
   },
   {
@@ -214,7 +214,6 @@ async function fetches() {
   const res = await fetch($url);
   stores = await res.json();
   gitDataBase(stores);
-  console.log(stores);
 }
 
 const gitDataBase = async (gitrepo) => {

@@ -186,6 +186,7 @@ body::-webkit-scrollbar {
   font-family: sans-serif;
   color: #ecf0f3;
   font-weight: 600;
+
 }
 .buttons-for-port {
   margin: 0 0 14px 0;
@@ -301,16 +302,19 @@ body::-webkit-scrollbar {
   border-radius: var(--border-radius-10);
   border: 2px solid #0d3073;
   transition: var(--transition-move);
+  word-wrap: break-word;
 }
 .ecard-git:hover {
   border-color: #436096;
   transition: var(--transition-move);
   background: transparent;
+
 }
 .ecard-git h2 {
   text-transform: capitalize;
   color: #def;
   margin: 20px 0;
+  word-wrap: break-word;
 }
 .ecard-git p {
   font-size: 1em;

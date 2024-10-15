@@ -2,9 +2,9 @@
 
 const express = require("express");
 const { resolve } = require("path");
+const dotenv = require("dotenv").config()
 const PORT = process.env.PORT || 4000;
 const app = express();
-const dotenv = require("dotenv");
 const serverless = require("serverless-http");
 const router = express.Router();
 const hostname = "0.0.0.0";
@@ -31,8 +31,8 @@ router.all("*", (req, res) => {
 
 app.use(router);
 
-app.listen(PORT, hostname, () => {
-  console.log("user hit the resource");
+app.listen(PORT, () => {
+  console.log("user hit the resource", PORT);
 });
 
 module.exports.handler = serverless(app);
